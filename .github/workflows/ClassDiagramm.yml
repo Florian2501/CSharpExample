@@ -15,3 +15,5 @@ jobs:
       
     - name: Generate Plantuml
       uses: grassedge/generate-plantuml-action@v1.5
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
