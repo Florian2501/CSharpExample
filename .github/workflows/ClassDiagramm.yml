@@ -15,6 +15,9 @@ jobs:
     - name: Check out current repository
       uses: actions/checkout@v2
       
-    - name: Generate Plantuml
+    - name: plantuml
       uses: grassedge/generate-plantuml-action@v1.5
+      with:
+        path: uml
+        message: "Render PlantUML files"
      
