@@ -16,7 +16,8 @@ jobs:
         node: [8, 10]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Clone the repository to the Server
+      uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
