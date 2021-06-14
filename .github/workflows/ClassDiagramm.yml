@@ -18,6 +18,5 @@ jobs:
     - name: plantuml
       uses: grassedge/generate-plantuml-action@v1.5
       with:
-        path: uml
         message: "Render PlantUML files"
      
