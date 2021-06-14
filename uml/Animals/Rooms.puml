@@ -1,0 +1,8 @@
+@startuml
+enum Rooms {
+    DiningRoom,
+    SleepingRoom,
+    Kitchen,
+    Hall,
+}
+@enduml

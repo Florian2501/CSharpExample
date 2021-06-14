@@ -1,0 +1,11 @@
+@startuml
+abstract class Pet {
+    + Pet(name:string, currentRoom:Rooms)
+    petName : string
+    + PetName : string <<get>>
+    + {abstract} TalkToOwner() : string
+    Sleeps(hours:byte) : void
+}
+Pet --> "localizedInRoom" Rooms
+Pet --> "LocalizedInRoom" Rooms
+@enduml

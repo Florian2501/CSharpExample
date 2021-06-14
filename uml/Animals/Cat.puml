@@ -1,0 +1,7 @@
+@startuml
+class Cat {
+    + Cat(name:string, currentRoom:Rooms)
+    + <<override>> TalkToOwner() : string
+}
+Pet <|-- Cat
+@enduml

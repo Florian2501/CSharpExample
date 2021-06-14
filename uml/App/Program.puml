@@ -1,0 +1,5 @@
+@startuml
+class MyLittleZoo {
+    + {static} Main(args:string[]) : void
+}
+@enduml

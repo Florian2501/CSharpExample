@@ -1,0 +1,31 @@
+@startuml
+class Cat {
+    + Cat(name:string, currentRoom:Rooms)
+    + <<override>> TalkToOwner() : string
+}
+Pet <|-- Cat
+class Dog {
+    + Dog(name:string, currentRoom:Rooms)
+    + <<override>> TalkToOwner() : string
+    + SearchForCat(cat:Cat) : bool
+}
+Pet <|-- Dog
+abstract class Pet {
+    + Pet(name:string, currentRoom:Rooms)
+    petName : string
+    + PetName : string <<get>>
+    + {abstract} TalkToOwner() : string
+    Sleeps(hours:byte) : void
+}
+Pet --> "localizedInRoom" Rooms
+Pet --> "LocalizedInRoom" Rooms
+enum Rooms {
+    DiningRoom,
+    SleepingRoom,
+    Kitchen,
+    Hall,
+}
+class MyLittleZoo {
+    + {static} Main(args:string[]) : void
+}
+@enduml

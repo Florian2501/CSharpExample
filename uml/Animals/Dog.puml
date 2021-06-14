@@ -1,0 +1,8 @@
+@startuml
+class Dog {
+    + Dog(name:string, currentRoom:Rooms)
+    + <<override>> TalkToOwner() : string
+    + SearchForCat(cat:Cat) : bool
+}
+Pet <|-- Dog
+@enduml
