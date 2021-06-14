@@ -17,3 +17,17 @@ jobs:
       
     - name: PlantUML CLI
       uses: lokkju/github-action-plantuml@v0.0.1
+      
+    - name: Commit files
+      run: |
+             git config --local user.email "action@github.com"
+             git config --local user.name "GitHub Action"
+             mv *.png ./diagram/
+             git add ./diagram/*.png
+             git status
+             git commit -m "Add new diagram image" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           branch: master
