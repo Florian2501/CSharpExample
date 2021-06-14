@@ -1,1 +1,17 @@
 name: Create ClassDiagramm
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+  
+    runs-on: windows-latest
+    
+    steps:
+    - name: Check out current repository
+      uses: actions/checkout@v2
+      
+    - name: Generate Plantuml
+      uses: grassedge/generate-plantuml-action@v1.5
