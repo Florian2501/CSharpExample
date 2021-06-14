@@ -22,7 +22,7 @@ jobs:
       run: |
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
-             mv *.png ./diagram/
+             mv ./uml/*.png ./diagram/
              git add ./diagram/*.png
              git status
              git commit -m "Add new diagram image" -a
