@@ -15,8 +15,5 @@ jobs:
     - name: Check out current repository
       uses: actions/checkout@v2
       
-    - name: plantuml
-      uses: grassedge/generate-plantuml-action@v1.5
-      with:
-        message: "Render PlantUML files"
-     
+    - name: PlantUML CLI
+      uses: lokkju/github-action-plantuml@v0.0.1
